@@ -17256,7 +17256,7 @@ html.rd-navbar-fixed-linked .page {
 	text-align: left;
 	font-size: 0;
 	line-height: 0;
-	font-family: 'Arista Pro Alternate', sans-serif; /* Usa Arista Pro Alternate para títulos */
+	font-family: 'Arista Pro Alternate fat'; /* Usa Arista Pro Alternate para títulos */
     font-weight: 700; /* Bold para títulos */
 	text-transform: uppercase;
 	max-width: 100%;
