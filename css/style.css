@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
 
 @font-face {
-	font-family: 'Arista Pro Alternate';
+	font-family: 'Arista Pro Alternate Light';
 	src: url('fonts/AristaProAlternate-Light.ttf') format('truetype');
 	font-weight: 300; /* Light */
   }
   
   @font-face {
-	font-family: 'Arista Pro Alternate';
+	font-family: 'Arista Pro Alternate Bold';
 	src: url('fonts/AristaProAlternate-Bold.ttf') format('truetype');
 	font-weight: 700; /* Bold */
   }
   
   @font-face {
-	font-family: 'Arista Pro Alternate';
+	font-family: 'Arista Pro Alternate Fat';
 	src: url('fonts/AristaProAlternate-Fat.ttf') format('truetype');
 	font-weight: 900; /* Fat */
   }
@@ -17256,7 +17256,9 @@ html.rd-navbar-fixed-linked .page {
 	text-align: left;
 	font-size: 0;
 	line-height: 0;
-	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+
+	font-family: 'Arista Pro Alternate', sans-serif; /* Usa Arista Pro Alternate para títulos */
+  font-weight: 700; /* Bold para títulos */
 	text-transform: uppercase;
 	max-width: 100%;
 	color: #151515;
