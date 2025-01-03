@@ -13556,8 +13556,8 @@ html.tablet .ui-to-top {
 	transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
 	background-image: url('../images/background-panel.jpg');
 	background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-position: center;
+ 
 }
 
 .rd-navbar--no-transition, .rd-navbar--no-transition * {
