@@ -13549,18 +13549,12 @@ html.tablet .ui-to-top {
 	}
 }
 
-.rd-navbar-panel {
-	position:fixed;
-	left: 0;
-	right: 0;
-	
-	background: #00aced;
-}
+
 
 .rd-navbar-wrap, .rd-navbar,
 .rd-menu,
 .rd-navbar-nav,
-.rd-navbar-static .rd-menu, .rd-navbar-fixed .rd-navbar-nav-wrap, .rd-navbar-fixed .rd-navbar-submenu, .rd-navbar-project {
+.rd-navbar-panel, .rd-navbar-static .rd-menu, .rd-navbar-fixed .rd-navbar-nav-wrap, .rd-navbar-fixed .rd-navbar-submenu, .rd-navbar-project {
 	transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
 	
 }
@@ -15046,7 +15040,7 @@ html.tablet .ui-to-top {
 .rd-navbar-fixed .rd-navbar-panel {
 	color: #151515;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-	background: #ffffff;
+	background: #00aced;
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {
@@ -16537,6 +16531,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-creative.rd-navbar-static .rd-navbar-main-outer {
 	padding-left: 15px;
 	padding-right: 15px;
+	
 }
 
 .rd-navbar-creative.rd-navbar-static .rd-navbar-aside,
