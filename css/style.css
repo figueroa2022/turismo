@@ -17034,7 +17034,8 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
 	padding-left: 15px;
 	padding-right: 15px;
-	background: url(../images/banner.jpg); /*Para PC*/
+	background: url(../images/banner2.jpg); /*Para PC*/
+	background-size: cover;
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside,
