@@ -1,8 +1,33 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+@font-face {
+	font-family: 'Arista Pro Alternate';
+	src: url('fonts/AristaProAlternate-Light.ttf') format('truetype');
+	font-weight: 300; /* Light */
+  }
+  
+  @font-face {
+	font-family: 'Arista Pro Alternate';
+	src: url('fonts/AristaProAlternate-Bold.ttf') format('truetype');
+	font-weight: 700; /* Bold */
+  }
+  
+  @font-face {
+	font-family: 'Arista Pro Alternate';
+	src: url('fonts/AristaProAlternate-Fat.ttf') format('truetype');
+	font-weight: 900; /* Fat */
+  }
+  
+
+
+
 /*
 * Trunk version 2.0.0
 */
 /** @group Base */
+
+
 a:focus,
 button:focus {
 	outline: none !important;
@@ -34,6 +59,9 @@ label {
 
 p {
 	margin: 0;
+		font-family: 'Quicksand', sans-serif; /* Usa Quicksand para párrafos */
+		font-weight: 300; /* Light para párrafos */
+	
 }
 
 ul,
@@ -100,7 +128,7 @@ html p a:hover {
 * Typography
 */
 body {
-	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-family: 'Quicksand', sans-serif; /* Establece Quicksand como fuente predeterminada */
 	font-size: 14px;
 	line-height: 1.71429;
 	font-weight: 400;
@@ -13549,14 +13577,11 @@ html.tablet .ui-to-top {
 	}
 }
 
-
-
 .rd-navbar-wrap, .rd-navbar,
 .rd-menu,
 .rd-navbar-nav,
 .rd-navbar-panel, .rd-navbar-static .rd-menu, .rd-navbar-fixed .rd-navbar-nav-wrap, .rd-navbar-fixed .rd-navbar-submenu, .rd-navbar-project {
 	transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
-	
 }
 
 .rd-navbar--no-transition, .rd-navbar--no-transition * {
@@ -14660,7 +14685,7 @@ html.tablet .ui-to-top {
 
 .rd-navbar-fixed .rd-navbar-brand img {
 	max-width: 120px;
-	max-height: 58px;
+	max-height: 50px;
 	width: auto;
 	height: auto;
 }
@@ -15040,7 +15065,7 @@ html.tablet .ui-to-top {
 .rd-navbar-fixed .rd-navbar-panel {
 	color: #151515;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-	background: #00aced;
+	background: #ffffff;
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {
@@ -16531,7 +16556,6 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-creative.rd-navbar-static .rd-navbar-main-outer {
 	padding-left: 15px;
 	padding-right: 15px;
-	
 }
 
 .rd-navbar-creative.rd-navbar-static .rd-navbar-aside,
@@ -17034,8 +17058,6 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
 	padding-left: 15px;
 	padding-right: 15px;
-	background: url(../images/banner2.jpg); /*Para PC*/
-	background-size: cover;
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside,
