@@ -46,7 +46,7 @@ body {
 
 /* Imagen o contenido del popup */
 .popup-image {
-    width: 50%;
+    width: 100%;
     display: block;
 }
 
