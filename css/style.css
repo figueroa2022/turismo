@@ -17096,6 +17096,7 @@ html.rd-navbar-fixed-linked .page {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	background: #54287f;
 }
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-nav {
@@ -17225,7 +17226,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-corporate.rd-navbar-fixed .rd-navbar-corporate-list-social {
-	color: #151515;
+	color: #54287f;
 }
 
 .rd-navbar-corporate.rd-navbar-fixed .rd-navbar-brand img {
