@@ -17256,6 +17256,10 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-corporate-contacts .icon {
+	font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 	vertical-align: middle;
 	text-align: center;
 	font-size: 24px;
