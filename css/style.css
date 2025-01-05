@@ -46,8 +46,8 @@ label {
 
 p {
 	margin: 0;
-		font-family: 'Quicksand', sans-serif; /* Usa Quicksand para párrafos */
-		font-weight: 300; /* Light para párrafos */
+    font-family: 'Quicksand', sans-serif; /* Usa Quicksand para párrafos */
+	font-weight: 300; /* Light para párrafos */
 	
 }
 
@@ -118,7 +118,7 @@ body {
 	font-family: 'Quicksand', sans-serif; /* Establece Quicksand como fuente predeterminada */
 	font-size: 14px;
 	line-height: 1.71429;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: normal;
 	color: #151515;
 	background-color: #ffffff;
@@ -17245,9 +17245,6 @@ html.rd-navbar-fixed-linked .page {
 	text-align: left;
 	font-size: 0;
 	line-height: 0;
-	font-family: "Quicksand", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
     font-style: normal;
 	text-transform: uppercase;
 	max-width: 100%;
@@ -17256,9 +17253,6 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-corporate-contacts .icon {
-	font-family: "Quicksand", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
     font-style: normal;
 	vertical-align: middle;
 	text-align: center;
