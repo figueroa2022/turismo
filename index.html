@@ -8,6 +8,12 @@
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="publicidad2.css">
+    <style>
+        /* Ocultar el contenido principal mientras el popup está activo */
+        body.content-hidden {
+            overflow: hidden;
+        }
+    </style>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     
@@ -21,28 +27,35 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
-
-
-     <!-- Contenedor del popup -->
+<!-- Contenedor del popup -->
     <div class="popup-overlay" id="popup">
         <div class="popup-content">
             <button class="popup-close" onclick="closePopup()">&times;</button>
             <!-- Imagen o PDF aquí -->
             <!-- Para una imagen -->
-             <img src="images/POSTER_CHAIRA TRAVEL_2X1_page-0001.jpg" alt="Publicidad" class="popup-image">
-           
+            <img src="publicidad.jpg" alt="Publicidad" class="popup-image">
+            <!-- Para un PDF -->
+            <!-- <iframe src="publicidad.pdf" class="popup-pdf"></iframe> -->
         </div>
+    </div>
+
+    <!-- Contenido principal de la página -->
+    <div id="main-content">
+        <h1>Bienvenido a mi sitio web</h1>
+        <p>Este es el contenido principal que se mostrará después de cerrar la publicidad.</p>
     </div>
 
     <script>
         // Función para cerrar el popup
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
+            document.body.classList.remove('content-hidden'); // Mostrar el contenido principal
         }
 
         // Mostrar el popup automáticamente al cargar la página
         window.onload = function() {
             document.getElementById('popup').style.display = 'flex';
+            document.body.classList.add('content-hidden'); // Ocultar el contenido principal
         };
     </script>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
