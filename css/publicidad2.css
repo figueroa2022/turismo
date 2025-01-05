@@ -46,8 +46,10 @@ body {
 
 /* Imagen o contenido del popup */
 .popup-image {
-    width: 100%;
-    display: block;
+   width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain;
 }
 
 .popup-pdf {
