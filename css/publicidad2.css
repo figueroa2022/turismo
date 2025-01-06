@@ -22,8 +22,8 @@ body {
 
 /* Estilo del contenedor del popup */
 .popup-content {
-     width: 50%; /* Cambia este valor */
-    height: 50%; /* Cambia este valor */
+     width: 80%; /* Cambia este valor */
+    height: 80%; /* Cambia este valor */
     position: relative;
     width: 90%;
     max-width: 600px;
