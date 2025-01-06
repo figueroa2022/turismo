@@ -50,6 +50,7 @@ body {
             height: auto;
             max-height: 100%;
             object-fit: contain;
+     z-index: 1002;
 }
 
 .popup-pdf {
