@@ -7,14 +7,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/publicidad.css">
+   
+   
+   <style>
+        /* Ocultar el contenido principal mientras el popup está activo */
+        body.content-hidden {
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        /* Ocultar el contenido principal mientras el popup está activo */
+        body.content-hidden {
+            overflow: hidden;
+        }
+
+        .popup-image {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain;
+
+        }
+
+        .popup-content {
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            position: relative;
+        }
+
+        .popup-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            z-index: 1003;
+        }
+    </style>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-     <!-- Stylesheets-->
+
+    
+    <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/publicidad.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
@@ -22,7 +87,7 @@
     <div class="popup-overlay" id="popup">
         <div class="popup-content">
             <button class="popup-close" onclick="closePopup()">&times;</button>
-            
+            <!-- Imagen o PDF aquí -->
             <!-- Para una imagen -->
             <!--<img src="images/POSTER_CHAIRA TRAVEL_2X1_page-0001.jpg" alt="Publicidad" class="popup-image">-->
             <!-- Para un PDF -->
@@ -30,13 +95,18 @@
             <!-- Para un Vídeo -->
             <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
               <div class="col-lg-6 text-center wow fadeInUp">
-                  <video controls width="500" height="400">
+                  <video controls width="556" height="382">
                       <source src="images/poster.mp4" type="video/mp4">
+                      Tu navegador no soporta el elemento de video.
                   </video>
               </div>
           </div>
+          
+      
           </div>
     </div>
+
+ 
 
     <script>
         // Función para cerrar el popup
@@ -51,7 +121,6 @@
             document.body.classList.add('content-hidden'); // Ocultar el contenido principal
         };
     </script>
-
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
@@ -61,8 +130,6 @@
         <p>Cargando...</p>
       </div>
     </div>
-
-
     <div class="page">
        <header class="section page-header">
         <!-- RD Navbar-->
@@ -168,8 +235,8 @@
         <div class="swiper-pagination"></div>
       </section>
       <!-- Section Box Categories-->
-
- <!-- Owl Carousel-->
+      
+          <!-- Owl Carousel-->
       
       <!-- Discover New Horizons-->
       <section class="section section-sm section-first bg-default text-md-left mt-3">
