@@ -8,70 +8,60 @@
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/publicidad.css">
-   
-   
-   <style>
-        /* Ocultar el contenido principal mientras el popup está activo */
-        body.content-hidden {
-            overflow: hidden;
-        }
-   </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Ocultar el contenido principal mientras el popup está activo */
-        body.content-hidden {
-            overflow: hidden;
-        }
-
-        .popup-image {
-            width: 100%;
-            height: auto;
-            max-height: 100%;
-            object-fit: contain;
-
-        }
-
-        .popup-content {
-            width: 50%;
-            height: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1001;
-            position: relative;
-        }
-
-        .popup-overlay {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            background: none;
-            border: none;
-            color: #000;
-            cursor: pointer;
-            z-index: 1003;
-        }
-    </style>
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+      /* Ocultar el contenido principal mientras el popup está activo */
+      body.content-hidden {
+          overflow: hidden;
+      }
+  
+      .popup-image {
+          width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+      }
+  
+      .popup-content {
+          width: 50%;
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          z-index: 1001;
+          position: relative;
+      }
+  
+      .popup-overlay {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 1000;
+      }
+  
+      .popup-close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          font-weight: bold;
+          background: none;
+          border: none;
+          color: #000;
+          cursor: pointer;
+          z-index: 1003;
+      }
+  </style>
     
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
@@ -84,43 +74,42 @@
   </head>
   <body>
 <!-- Contenedor del popup -->
-    <div class="popup-overlay" id="popup">
-        <div class="popup-content">
-            <button class="popup-close" onclick="closePopup()">&times;</button>
-            <!-- Imagen o PDF aquí -->
-            <!-- Para una imagen -->
-            <!--<img src="images/POSTER_CHAIRA TRAVEL_2X1_page-0001.jpg" alt="Publicidad" class="popup-image">-->
-            <!-- Para un PDF -->
-            <!-- <iframe src="publicidad.pdf" class="popup-pdf"></iframe> -->
-            <!-- Para un Vídeo -->
-            <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-              <div class="col-lg-6 text-center wow fadeInUp">
-                  <video controls width="556" height="382">
-                      <source src="images/poster.mp4" type="video/mp4">
-                      Tu navegador no soporta el elemento de video.
-                  </video>
-              </div>
+<div class="popup-overlay" id="popup">
+  <div class="popup-content">
+      <button class="popup-close" onclick="closePopup()">&times;</button>
+      <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+          <div class="col-lg-6 text-center wow fadeInUp">
+              <video id="popupVideo" autoplay muted controls width="556" height="382">
+                  <source src="images/poster.mp4" type="video/mp4">
+                 
+              </video>
           </div>
-          
-      
-          </div>
-    </div>
+      </div>
+  </div>
+</div>
 
  
+   
+  <script>
+      // Obtener elementos del DOM
+      const popup = document.getElementById('popup');
+      const video = document.getElementById('popupVideo');
+  
+      // Función para cerrar el popup
+      function closePopup() {
+          popup.style.display = 'none'; // Ocultar el popup
+          video.pause(); // Pausar el video
+          video.currentTime = 0; // Reiniciar el video
+      }
+  
+      // Mostrar el popup al cargar la página
+      window.onload = function() {
+          popup.style.display = 'flex'; // Mostrar el popup
+          document.body.classList.add('content-hidden'); // Desactivar scroll del body
+      };
+  </script>
 
-    <script>
-        // Función para cerrar el popup
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-            document.body.classList.remove('content-hidden'); // Mostrar el contenido principal
-        }
 
-        // Mostrar el popup automáticamente al cargar la página
-        window.onload = function() {
-            document.getElementById('popup').style.display = 'flex';
-            document.body.classList.add('content-hidden'); // Ocultar el contenido principal
-        };
-    </script>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
