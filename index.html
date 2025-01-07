@@ -23,8 +23,8 @@
       }
   
       .popup-content {
-          width: 30%; /*Tamaño ventana*/
-          height: 74%;
+          width: 100%; /*Tamaño ventana*/
+          height: 82%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -62,20 +62,6 @@
           z-index: 1003;
       }
 
-      #playButton {
-        font-size: 18px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-
-    #playButton:hover {
-        background-color: #0056b3;
-    }
   </style>
     
     <!-- Stylesheets-->
@@ -94,12 +80,10 @@
       <button class="popup-close" onclick="closePopup()">&times;</button>
       <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
         <div class="col-lg-6 text-center wow fadeInUp">
-          <video id="popupVideo" controls width="556" height="382">
+          <video id="popupVideo" autoplay muted controls width="556" height="382">
               <source src="images/poster.mp4" type="video/mp4">
-             
-          </video>
-          
-          <button id="playButton" onclick="playVideo()">Reproducir con sonido</button>
+              Tu navegador no soporta el elemento de video.
+          </video>       
       </div>
       </div>
   </div>
@@ -127,11 +111,7 @@
           popup.style.display = 'flex'; // Mostrar el popup
           document.body.classList.add('content-hidden'); // Desactivar scroll del body
       };
-       // Función para reproducir el video con sonido
-    function playVideo() {
-       
-        playButton.style.display = 'none'; // Ocultar el botón
-    }
+   
   </script>
 
 
