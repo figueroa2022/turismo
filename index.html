@@ -81,7 +81,8 @@
           <div class="col-lg-6 text-center wow fadeInUp">
               <video id="popupVideo" autoplay  controls width="556" height="382">
                   <source src="images/poster.mp4" type="video/mp4">
-                 
+                  <button id="playButton" onclick="playVideo()">Reproducir con sonido</button>
+           
               </video>
           </div>
       </div>
@@ -104,7 +105,11 @@
           document.body.classList.remove('content-hidden');
 
       }
-  
+   // Función para reproducir el video con sonido
+   function playVideo() {
+        video.play(); // Reproducir el video
+        playButton.style.display = 'none'; // Ocultar el botón
+    }
       // Mostrar el popup al cargar la página
       window.onload = function() {
           popup.style.display = 'flex'; // Mostrar el popup
