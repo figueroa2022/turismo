@@ -7,12 +7,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <link rel="stylesheet" href="css/publicidad.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-    
+    <style>
+      /* Ocultar el contenido principal mientras el popup está activo */
+      body.content-hidden {
+          overflow: hidden;
+      }
+  
+      .popup-image {
+          width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+      }
+  
+      .popup-content {
+          width: 50%; /* Tamaño para pantallas grandes */
+          height: auto;
+          max-height: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          z-index: 1001;
+          position: relative;
+      }
+  
+      .popup-overlay {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 1000;
+      }
+  
+      .popup-close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          font-weight: bold;
+          background: none;
+          border: none;
+          color: #000;
+          cursor: pointer;
+          z-index: 1003;
+      }
+  
+      video {
+          width: 90%; /* Video ocupa el 90% del ancho del popup */
+          height: auto; /* Mantiene proporción */
+      }
+  
+      /* Diseño responsivo */
+      @media (max-width: 768px) {
+          .popup-content {
+              width: 90%; /* Ajustar el ancho en móviles */
+              height: auto; /* Ajuste automático */
+              max-height: 90%;
+          }
+  
+          video {
+              width: 100%; /* Video ocupa todo el ancho del popup */
+              height: auto; /* Mantiene proporción */
+          }
+      }
+  </style>
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -39,7 +111,31 @@
 </div>
 
 
-<script src="js/script.js"></script>
+
+   
+<script>
+  // Obtener elementos del DOM
+  const popup = document.getElementById('popup');
+  const video = document.getElementById('popupVideo');
+
+  // Función para cerrar el popup
+  function closePopup() {
+   
+      popup.style.display = 'none'; // Ocultar el popup
+      video.pause(); // Pausar el video
+      video.currentTime = 0; // Reiniciar el video
+      document.body.classList.remove('content-hidden');
+
+  }
+
+  // Mostrar el popup al cargar la página
+  window.onload = function() {
+      popup.style.display = 'flex'; // Mostrar el popup
+      document.body.classList.add('content-hidden'); // Desactivar scroll del body
+  };
+
+</script>
+
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
