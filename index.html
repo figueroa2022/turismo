@@ -78,11 +78,13 @@
   <div class="popup-content">
       <button class="popup-close" onclick="closePopup()">&times;</button>
       <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-          <div class="col-lg-6 text-center wow fadeInUp">
-              <video id="popupVideo" autoplay width="556" height="382">
-                  <source src="images/poster.mp4" type="video/mp4">             
-              </video>
-          </div>
+        <div class="col-lg-6 text-center wow fadeInUp">
+          <video id="popupVideo" controls width="556" height="382">
+              <source src="images/poster.mp4" type="video/mp4">
+              Tu navegador no soporta el elemento de video.
+          </video>
+          <button id="playButton" onclick="playVideo()">Reproducir con sonido</button>
+      </div>
       </div>
   </div>
 </div>
@@ -109,6 +111,11 @@
           popup.style.display = 'flex'; // Mostrar el popup
           document.body.classList.add('content-hidden'); // Desactivar scroll del body
       };
+       // Función para reproducir el video con sonido
+    function playVideo() {
+        video.play(); // Reproducir el video
+        playButton.style.display = 'none'; // Ocultar el botón
+    }
   </script>
 
 
