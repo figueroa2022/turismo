@@ -97,6 +97,8 @@
   
       // Función para cerrar el popup
       function closePopup() {
+        document.body.classList.remove('content-hidden');
+
           popup.style.display = 'none'; // Ocultar el popup
           video.pause(); // Pausar el video
           video.currentTime = 0; // Reiniciar el video
