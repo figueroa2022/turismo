@@ -23,8 +23,9 @@
       }
   
       .popup-content {
-          width: 100%; /*Tamaño ventana*/
-          height: 82%;
+          width: 50%; /* Tamaño para pantallas grandes */
+          height: auto;
+          max-height: 80%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -61,6 +62,27 @@
           cursor: pointer;
           z-index: 1003;
       }
+  
+      video {
+          width: 90%; /* Video ocupa el 90% del ancho del popup */
+          height: auto; /* Mantiene proporción */
+      }
+  
+      /* Diseño responsivo */
+      @media (max-width: 768px) {
+          .popup-content {
+              width: 90%; /* Ajustar el ancho en móviles */
+              height: auto; /* Ajuste automático */
+              max-height: 90%;
+          }
+  
+          video {
+              width: 100%; /* Video ocupa todo el ancho del popup */
+              height: auto; /* Mantiene proporción */
+          }
+      }
+  </style>
+  
 
   </style>
     
