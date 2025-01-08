@@ -8,11 +8,18 @@
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
+   
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/publicidad.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 
+ <!-- Estilo publicidad -->
     <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
       /* Ocultar el contenido principal mientras el popup está activo */
       body.content-hidden {
           overflow: hidden;
@@ -85,59 +92,30 @@
           }
       }
     </style>
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
-  <body>
-    
-<!-- Contenedor del popup -->
+<!-- Body -->
+<body>
+
+<!-- Popup -->
 <div class="popup-overlay" id="popup">
   <div class="popup-content">
       <button class="popup-close" onclick="closePopup()">&times;</button>
       <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
         <div class="col-lg-6 text-center wow fadeInUp">
           <video id="popupVideo" autoplay muted controls width="556" height="382">
-              <source src="images/poster.mp4" type="video/mp4">
-             
+              <source src="images/poster.mp4" type="video/mp4">            
           </video>       
       </div>
       </div>
   </div>
 </div>
 
+<!-- Contenido Main -->
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/">
+      <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+    </a>
+    </div>
 
-
-   
-<script>
-  // Obtener elementos del DOM
-  const popup = document.getElementById('popup');
-  const video = document.getElementById('popupVideo');
-
-  // Función para cerrar el popup
-  function closePopup() {
-   
-      popup.style.display = 'none'; // Ocultar el popup
-      video.pause(); // Pausar el video
-      video.currentTime = 0; // Reiniciar el video
-      document.body.classList.remove('content-hidden');
-
-  }
-
-  // Mostrar el popup al cargar la página
-  window.onload = function() {
-      popup.style.display = 'flex'; // Mostrar el popup
-      document.body.classList.add('content-hidden'); // Desactivar scroll del body
-  };
-
-</script>
-
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container">
@@ -148,6 +126,7 @@
     </div>
 
     <div class="page">
+<!-- Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
@@ -155,16 +134,16 @@
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
             <div class="rd-navbar-aside-outer">
               <div class="rd-navbar-aside">
-                <!-- RD Navbar Panel-->
                 <div class="rd-navbar-panel">
-                  <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img src="images/logo-default-450x37.png" alt="" width="225" height="10"/></a>
+                  <a class="brand" href="index.html">
+                  <img src="images/logo-default-450x37.png" alt="" width="225" height="10"/>
+                  </a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
+                   <!-- Contactos Navbar -->
                   <ul class="rd-navbar-corporate-contacts">
                     <ul class="quicksand-font">
                     <li>
@@ -186,12 +165,13 @@
             <div class="rd-navbar-main-outer">
               <div class="rd-navbar-main">
                 <div class="rd-navbar-nav-wrap">
+                  <!-- Redes sociales Navbar -->
                   <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
                     <li><a class="icon fa fa-facebook" href="https://www.facebook.com/chairatravel"></a></li>
                      <li><a class="icon fab fa-tiktok" href="https://www.tiktok.com/@chairatravel"></a></li>
                     <li><a class="icon fa fa-instagram" href="https://www.instagram.com/chairatravel/"></a></li>
                   </ul>
-                  <!-- RD Navbar Nav-->
+                  <!-- Navegacion Navbar-->
                   <ul class="rd-navbar-nav">
                     <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Inicio</a>
                     </li>
@@ -207,8 +187,8 @@
             </div>
           </nav>
         </div>
-      </header>
-      <!-- Swiper-->
+</header>
+ <!-- Swiper-->
       <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
         <div class="swiper-wrapper text-left">
           <div class="swiper-slide context-dark" data-slide-bg="images/slider-4-slide-1-1920x678.jpg">
@@ -248,14 +228,10 @@
             </div>
           </div>
         </div>
-        <!-- Swiper Pagination-->
+<!-- Swiper Pagination-->
         <div class="swiper-pagination"></div>
-      </section>
-      <!-- Section Box Categories-->
-      
-          <!-- Owl Carousel-->
-      
-      <!-- Discover New Horizons-->
+      </section> 
+<!-- Información General-->
       <section class="section section-sm section-first bg-default text-md-left mt-3">
         <div class="container">
           <div class="row row-50 align-items-center justify-content-center justify-content-xl-between ">
@@ -294,7 +270,7 @@
           </div>
         </div>
       </section>
-      <!--	Our Services-->
+<!--	Nuestros Servicios-->
       <section class="section section-sm">
         <div class="container">
           <h3>Nuestros Servicios</h3>
@@ -380,7 +356,7 @@
           </div>
         </div>
       </section>
-      <!-- Hot tours-->
+<!-- Hot tours-->
       <section class="section section-sm bg-default">
         <div class="container">
           <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Paquetes Turisticos</span></h3>
@@ -424,7 +400,8 @@
           </div>
         </div>
       </section>
-      <!-- Different People-->
+
+<!-- Personajes principales-->
       <section class="section section-sm">
         <div class="container">
           <h3 class="title-block find-car oh"><span class="d-inline-block wow slideInUp">Diferentes personas, una misma misión</span></h3>
@@ -500,7 +477,7 @@
           </div>
         </div>
       </section>
-      <!-- Section Subscribe-->
+<!-- Sesión Subscribete-->
       <section class="section bg-default text-center offset-top-50">
         <div class="parallax-container" data-parallax-img="images/parallax-1-1920x850.jpg">
           <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
@@ -511,7 +488,7 @@
           </div>
         </div>
       </section>
-      <!--	Instagrram wondertour-->
+<!--	Sesión Galeria-->
       <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
         <div class="container-fluid">
           <h6 class="gallery-title">Galería</h6>
@@ -569,6 +546,7 @@
           </div>
         </div>
       </section>
+<!-- Footer -->    
        <footer class="section footer-corporate context-dark">
         <div class="footer-corporate-inset">
           <div class="container">
@@ -640,6 +618,7 @@
             </div>
           </div>
         </div>
+<!-- Footer Redes pie de pagina-->
         <div class="footer-corporate-bottom-panel">
           <div class="container">
             <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
@@ -662,6 +641,7 @@
             </div>
           </div>
         </div>
+
       </footer>
     </div>
     <!-- Global Mailform Output-->
@@ -669,5 +649,31 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Función Popup --> 
+    <script>
+  // Obtener elementos del DOM
+  const popup = document.getElementById('popup');
+  const video = document.getElementById('popupVideo');
+
+  // Función para cerrar el popup
+  function closePopup() {
+   
+      popup.style.display = 'none'; // Ocultar el popup
+      video.pause(); // Pausar el video
+      video.currentTime = 0; // Reiniciar el video
+      document.body.classList.remove('content-hidden');
+
+  }
+
+  // Mostrar el popup al cargar la página
+  window.onload = function() {
+      popup.style.display = 'flex'; // Mostrar el popup
+      document.body.classList.add('content-hidden'); // Desactivar scroll del body
+  };
+
+    </script>
+
+
   </body>
 </html>
