@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Chairá Travel</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/publicidad.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Inline Styles -->
+    <style>
+      body.content-hidden {
+          overflow: hidden;
+      }
+
+      .popup-image {
+          width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+      }
+
+      .popup-content {
+          width: 50%;
+          max-height: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          position: relative;
+          z-index: 10000;
+      }
+
+      .popup-overlay {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 9999;
+      }
+
+      .popup-close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          background: none;
+          border: none;
+          color: #000;
+          cursor: pointer;
+          z-index: 10001;
+      }
+
+      video {
+          width: 90%;
+          height: auto;
+      }
+
+      @media (max-width: 768px) {
+          .popup-content {
+              width: 90%;
+              max-height: 90%;
+          }
+          video {
+              width: 100%;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Popup -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-content">
+        <button class="popup-close" onclick="closePopup()">&times;</button>
+        <div class="row row-50 align-items-center justify-content-center">
+          <div class="col-lg-6 text-center wow fadeInUp">
+            <video id="popupVideo" autoplay muted controls>
+              <source src="images/poster.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+        <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser.">
+      </a>
+    </div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Cargando...</p>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Header -->
+      <header class="section page-header">
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-lg-stick-up="true">
+            <div class="rd-navbar-aside-outer">
+              <div class="rd-navbar-aside">
+                <div class="rd-navbar-panel">
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="index.html">
+                      <img src="images/logo-default-450x37.png" alt="Chairá Travel" width="225" height="37">
+                    </a>
+                  </div>
+                </div>
+                <div class="rd-navbar-aside-right rd-navbar-collapse">
+                  <ul class="rd-navbar-corporate-contacts">
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                        <div class="unit-body"><a class="link-phone" href="tel:#">+57 319-398-1055</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-left"><span class="icon fa fa-whatsapp"></span></div>
+                        <div class="unit-body"><a class="link-phone" href="tel:#">+57 322-476-3453</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
+                    <li><a class="icon fa fa-facebook" href="https://www.facebook.com/chairatravel"></a></li>
+                    <li><a class="icon fab fa-tiktok" href="https://www.tiktok.com/@chairatravel"></a></li>
+                    <li><a class="icon fa fa-instagram" href="https://www.instagram.com/chairatravel/"></a></li>
+                  </ul>
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Inicio</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">Acerca de nosotros</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Mapa Ruta</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contáctenos</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Swiper Section -->
+      <section class="section swiper-container swiper-slider" data-loop="true" data-autoplay="5000">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide context-dark" data-slide-bg="images/slider-4-slide-1-1920x678.jpg">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h6 class="text-uppercase">Disfruta de los Mejores Destinos con Chairá Travel</h6>
+                    <h2 class="oh font-weight-light">Explora <span class="font-weight-bold">El Caquetá</span></h2>
+                    <a class="button button-default-outline" href="#">Ponte en contacto con nosotros</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </section>
+      <footer class="section footer-corporate context-dark">
+        <div class="footer-corporate-inset">
+          <div class="container">
+            <div class="row row-40 justify-content-lg-between">
+              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+                <h6 class="text-spacing-100 text-uppercase">Contáctenos</h6>
+                <ul class="footer-contacts d-inline-block d-sm-block">
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                      <div class="unit-body"><a class="link-phone" href="tel:#">+57 319-398-1055</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                      <div class="unit-body"><a class="link-aemail" href="mailto:chairatravel2024@gmail.com">chairatravel2024@gmail.com</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                      <div class="unit-body"><a class="link-location" href="#">Cartagena Del Chairá, Caquetá</a></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+                <h6 class="text-spacing-100 text-uppercase">Noticias populares</h6>
+                <article class="post post-minimal-2">
+                  <p class="post-minimal-2-title"><a href="#">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
+                  <div class="post-minimal-2-time"><time datetime="2019-05-04">May 04, 2019</time></div>
+                </article>
+                <article class="post post-minimal-2">
+                  <p class="post-minimal-2-title"><a href="#">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
+                  <div class="post-minimal-2-time"><time datetime="2019-05-04">May 04, 2019</time></div>
+                </article>
+              </div>
+              <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
+                <h6 class="text-spacing-100 text-uppercase">Enlaces rápidos</h6>
+                <ul class="list-marked list-marked-secondary">
+                  <li><a href="about.html">Acerca de nosotros</a></li>
+                  <li><a href="#">Nuestros tours</a></li>
+                  <li><a href="#">Nuestro equipo</a></li>
+                  <li><a href="#">Galería</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-corporate-bottom-panel">
+          <div class="container">
+            <div class="row align-items-md-center">
+              <div class="col-sm-6 col-md-4 text-md-center">
+                <ul class="list-inline footer-social-list-2">
+                  <li><a class="icon fa fa-facebook" href="https://www.facebook.com/chairatravel"></a></li>
+                  <li><a class="icon fab fa-tiktok" href="https://www.tiktok.com/@chairatravel"></a></li>
+                  <li><a class="icon fa fa-instagram" href="https://www.instagram.com/chairatravel/"></a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <p>&copy; <span class="copyright-year"></span> Chairá Travel. All Rights Reserved.</p>
+              </div>
+              <div class="col-sm-6 col-md-4 text-md-right">
+                <p><a href="#">Privacy Policy</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      <!-- Global Mailform Output -->
+      <div class="snackbars" id="form-output-global"></div>
+      
+      <!-- Javascript -->
+      <script src="js/core.min.js"></script>
+      <script src="js/script.js"></script>
+</body>
+</html>
+      
