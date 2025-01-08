@@ -36,7 +36,7 @@
           border-radius: 10px;
           overflow: hidden;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          z-index: 1001;
+          z-index: 10000;
           position: relative;
       }
   
@@ -50,7 +50,7 @@
           width: 100%;
           height: 100%;
           background: rgba(0, 0, 0, 0.7);
-          z-index: 1000;
+          z-index: 9999;
       }
   
       .popup-close {
@@ -63,7 +63,7 @@
           border: none;
           color: #000;
           cursor: pointer;
-          z-index: 1003;
+          z-index: 10001;
       }
   
       video {
@@ -84,7 +84,7 @@
               height: auto; /* Mantiene proporción */
           }
       }
-  </style>
+    </style>
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -95,6 +95,7 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
+    
 <!-- Contenedor del popup -->
 <div class="popup-overlay" id="popup">
   <div class="popup-content">
@@ -145,8 +146,9 @@
         <p>Cargando...</p>
       </div>
     </div>
+
     <div class="page">
-       <header class="section page-header">
+      <header class="section page-header">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
           <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
