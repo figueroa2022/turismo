@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const header = `
+  console.log("Header.js está funcionando"); 
+  const header = `
     <header class="section page-header"> 
       <div class="rd-navbar-wrap">
         <nav class="rd-navbar rd-navbar-corporate" 
