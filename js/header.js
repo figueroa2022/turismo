@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const header = `
+    <header class="section page-header"> 
       <div class="rd-navbar-wrap">
         <nav class="rd-navbar rd-navbar-corporate" 
           data-layout="rd-navbar-fixed" 
@@ -68,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </nav>
       </div>
-     `;
+    </header>
+    `;
     document.querySelector("header").innerHTML = header;
   });
   
