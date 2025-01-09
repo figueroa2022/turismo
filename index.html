@@ -89,6 +89,26 @@
               height: auto; /* Mantiene proporción */
           }
       }
+
+      .whatsapp-button {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background-color: #4cc370;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 60px;
+            box-shadow: 2px 2px 3px #999;
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #3d9e5a;
+        }
     </style>
   </head>
 
@@ -670,6 +690,9 @@
 
     </script>
 
-
+<a href="https://api.whatsapp.com/send?phone=52222222&text=Este%20es%20un%20texto%20de%20ejemplo"
+class="whatsapp-button" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
   </body>
 </html>
