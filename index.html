@@ -594,6 +594,8 @@ function loadHeader() {
       if (link.getAttribute('href') === currentPath) {
           link.parentElement.classList.add('active'); // Agrega la clase al <li>
             console.log("entro");
+            console.log(link.getAttribute('href'));
+            console.log(currentPath);
       } else {
           link.parentElement.classList.remove('active'); // Asegura que otros elementos no tengan la clase
       }
