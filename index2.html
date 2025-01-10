@@ -148,17 +148,22 @@
 <script>
   // Función para cargar el header
   function loadHeader() {
-      fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('header-container').innerHTML = data;
-              console.error(' Header cargado correctamente');
-          })
-          .catch(error => console.error('Error al cargar el header:', error));
-  }
+            fetch('header.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    console.log('Header cargado correctamente');
+                })
+                .catch(error => console.error('Error al cargar el header:', error));
+        }
 
-  // Cargar el header cuando la página esté lista
-  document.addEventListener('DOMContentLoaded', loadHeader);
+        // Cargar el header cuando la página esté lista
+        loadHeader();
 </script>
 
  <!-- Swiper-->
