@@ -145,6 +145,7 @@
 
 <div class="page">
 <!-- Header-->
+<div id="header-placeholder"></div>
 <script>
   // Función para cargar el header
   function loadHeader() {
@@ -156,7 +157,7 @@
                     return response.text();
                 })
                 .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
+                    document.getElementById('header-placeholder').innerHTML = data;
                     console.log('Header cargado correctamente');
                 })
                 .catch(error => console.error('Error al cargar el header:', error));
