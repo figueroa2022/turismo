@@ -145,17 +145,28 @@
 
 <div class="page">
 <!-- Header-->
-<div id="header-placeholder"></div>
-
-<!-- Script para incluir el header -->
+<div id="header"></div>
 <script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error al cargar el header:', error));
+  // Función para cargar el header
+function loadHeader() {
+            fetch('partials/header.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                    console.log('Header cargado correctamente');
+                })
+                .catch(error => console.error('Error al cargar el header:', error));
+        }
+
+        // Cargar el header cuando la página esté lista
+        loadHeader();
 </script>
+
  <!-- Swiper-->
 <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
         <div class="swiper-wrapper text-left">
