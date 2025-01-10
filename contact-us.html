@@ -29,27 +29,8 @@
     </div>
     <div class="page">
 <!-- Header-->
-<div id="header"></div>
-<script>
-  // Función para cargar el header
-function loadHeader() {
-            fetch('partials/header.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                    console.log('Header cargado correctamente');
-                })
-                .catch(error => console.error('Error al cargar el header:', error));
-        }
-
-        // Cargar el header cuando la página esté lista
-        loadHeader();
-</script>
+<header class="section page-header"></header>
+<script src="js/header.js"></script>
 
     <!-- RD Google Map-->
 <section class="section section-fluid">
@@ -147,32 +128,13 @@ function loadHeader() {
       </section>
 
 <!-- Footer -->    
-<div id="footer"></div>
-<script>
-  // Función para cargar el header
-  function loadHeader() {
-            fetch('partials/footer.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => console.error('Error al cargar el header:', error));
-        }
-
-        // Cargar el header cuando la página esté lista
-        loadHeader();
-</script>
-
-    </div>
+<footer class="section footer-corporate context-dark"></footer>
+<script src="js/footer.js"></script>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/selection.js"></script>
   </body>
 </html>

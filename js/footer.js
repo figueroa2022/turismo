@@ -1,5 +1,6 @@
-<footer class="section footer-corporate context-dark">
-    <div class="footer-corporate-inset">
+const footer = document.querySelector('footer');
+footer.innerHTML = `    
+<div class="footer-corporate-inset">
       <div class="container">
         <div class="row row-40 justify-content-lg-between">
           <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
@@ -91,6 +92,4 @@
           </div>
         </div>
       </div>
-  </div>
-  </footer>
-  
+  </div>`;

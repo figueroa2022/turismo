@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Typography</title>
+    <title>Chairá Travel</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 
-    
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+   
     <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container">
@@ -29,27 +29,9 @@
     </div>
     <div class="page">
 <!-- Header-->
-<div id="header"></div>
-<script>
-  // Función para cargar el header
-function loadHeader() {
-            fetch('partials/header.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                    console.log('Header cargado correctamente');
-                })
-                .catch(error => console.error('Error al cargar el header:', error));
-        }
+<header class="section page-header"></header>
+<script src="js/header.js"></script>
 
-        // Cargar el header cuando la página esté lista
-        loadHeader();
-</script>
 
       <!-- Breadcrumbs -->
       <section class="breadcrumbs-custom-inset">
@@ -162,27 +144,8 @@ function loadHeader() {
         </div>
       </section>
 <!-- Footer -->    
-div id="footer"></div>
-<script>
-  // Función para cargar el header
-  function loadHeader() {
-            fetch('partials/footer.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => console.error('Error al cargar el header:', error));
-        }
-
-        // Cargar el header cuando la página esté lista
-        loadHeader();
-</script>
-
+<footer class="section footer-corporate context-dark"></footer>
+<script src="js/footer.js"></script>
 </div>
 
     <!-- Global Mailform Output-->
@@ -190,5 +153,6 @@ div id="footer"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/selection.js"></script>
   </body>
 </html>

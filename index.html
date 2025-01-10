@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-   
+
  <!-- Estilo publicidad -->
     <style>
       .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
@@ -144,28 +144,11 @@
     </div>
 
 <div class="page">
+  
 <!-- Header-->
-<div id="header"></div>
-<script>
-  // Función para cargar el header
-function loadHeader() {
-            fetch('header.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                    console.log('Header cargado correctamente');
-                })
-                .catch(error => console.error('Error al cargar el header:', error));
-        }
-
-        // Cargar el header cuando la página esté lista
-        loadHeader();
-</script>
+  <header class="section page-header"></header>
+  <script src="js/header.js"></script>
+  
 
  <!-- Swiper-->
 <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
@@ -525,30 +508,9 @@ function loadHeader() {
           </div>
         </div>
  </section>
-
-<!-- Footer -->    
-<div id="footer"></div>
-<script>
-  // Función para cargar el header
-  function loadFooter() {
-            fetch('partials/footer.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                    console.log('footer cargado correctamente');
-                })
-                .catch(error => console.error('Error al cargar el header:', error));
-        }
-
-        // Cargar el footer cuando la página esté lista
-        loadFooter();
-</script>
-
+<!-- Footer-->
+<footer class="section footer-corporate context-dark"></footer>
+<script src="js/footer.js"></script>
 </div>
 
     <!-- Global Mailform Output-->
@@ -557,7 +519,7 @@ function loadHeader() {
  
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-
+    <script src="js/selection.js"></script>
     <!-- Función Popup --> 
 <script>
   // Obtener elementos del DOM
@@ -584,23 +546,6 @@ function loadHeader() {
 
 
 
-<script>
-  // Obtener el nombre de la página actual
-  const currentPath = window.location.pathname.split('/').pop(); // Obtiene el último segmento del path
-  const navLinks = document.querySelectorAll('.rd-navbar-nav .rd-nav-item a');
-
-  // Recorrer los enlaces del menú y marcar como activo el correspondiente
-  navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-          link.parentElement.classList.add('active'); // Agrega la clase al <li>
-            console.log("entro");
-            console.log(link.getAttribute('href'));
-            console.log(currentPath);
-      } else {
-          link.parentElement.classList.remove('active'); // Asegura que otros elementos no tengan la clase
-      }
-  });
-</script>
  <!-- WhatsApp -->
 <a href="https://api.whatsapp.com/send?phone=573206090487&text=Este%20es%20un%20texto%20de%20ejemplo"
 class="whatsapp-button" target="_blank">
