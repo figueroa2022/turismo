@@ -145,7 +145,8 @@
 
 <div class="page">
 <!-- Header-->
-<div id="header"></div>
+<header id="header-container" class="section page-header"></header>
+
 <script>
   // Función para cargar el header
 function loadHeader() {
@@ -157,7 +158,7 @@ function loadHeader() {
                     return response.text();
                 })
                 .then(data => {
-                    document.getElementById('header').innerHTML = data;
+                    document.getElementById('header-container').innerHTML = data;
                     console.log('Header cargado correctamente');
                 })
                 .catch(error => console.error('Error al cargar el header:', error));
