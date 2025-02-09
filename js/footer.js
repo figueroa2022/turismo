@@ -88,7 +88,7 @@ footer.innerHTML = `
             <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Chairá Travel</span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
           </div>
           <div class="col-sm-6 col-md-4 text-md-right">
-            <p class="rights"><a href="#">Aviso Legal</a></p>
+            <p class="rights"><a href="legal-notice.html">Aviso Legal</a></p>
             <p class="rights"><a href="#">Política de privacidad</a></p>
           </div>
         </div>
