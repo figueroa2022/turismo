@@ -6,7 +6,7 @@ footer.innerHTML = `
           <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
             <div class="oh-desktop">
               <div class="wow slideInRight" data-wow-delay="0s">
-                <h6 class="text-spacing-100 text-uppercase">Contáctenos</h6>
+                <h6 class="text-spacing-100 text-uppercase">Contáctanos</h6>
                 <ul class="footer-contacts d-inline-block d-sm-block">
                   <li>
                     <div class="unit">
