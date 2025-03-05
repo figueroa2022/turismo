@@ -31,7 +31,8 @@
       }
   
       .popup-content {
-          
+          width: 50%; /* Tamaño para pantallas grandes */
+          height: auto;
           max-height: 80%;
           display: flex;
           justify-content: center;
@@ -56,7 +57,6 @@
           background: rgba(0, 0, 0, 0.7);
           z-index: 9999;
       }
-  
       .popup-close {
     position: absolute;
     top: 10px;
@@ -82,24 +82,22 @@
     background-color: #54287f;
     transform: scale(1.1); /* Efecto de agrandamiento */
 }
-
       video {
-          width: 100%; /* Video ocupa el 90% del ancho del popup */
-          height: 100%; /* Mantiene proporción */
+          width: 90%; /* Video ocupa el 90% del ancho del popup */
+          height: auto; /* Mantiene proporción */
       }
   
       /* Diseño responsivo */
       @media (max-width: 768px) {
           .popup-content {
-              width: 100%; /* Ajustar el ancho en móviles */
+              width: 90%; /* Ajustar el ancho en móviles */
               height: auto; /* Ajuste automático */
               max-height: 90%;
           }
   
           video {
-              width: 200%; /* Video ocupa todo el ancho del popup */
-              height: 200%;
-             
+              width: 100%; /* Video ocupa todo el ancho del popup */
+              height: auto; /* Mantiene proporción */
           }
       }
 
