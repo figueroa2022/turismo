@@ -52,6 +52,8 @@ header.innerHTML = `
             </li>
             <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contáctenos</a>
             </li>
+            <li class="rd-nav-item"><a class="rd-nav-link" href="testimonies.html">Testimonios</a>
+            </li>
           </ul>
         </div>
       </div>
